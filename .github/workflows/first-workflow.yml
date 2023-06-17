@@ -17,6 +17,7 @@ jobs:
         run: echo "step2"
 
   cow:
+    needs: job1
     name: Cowsays
     runs-on: ubuntu-latest
     steps:
