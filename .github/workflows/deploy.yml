@@ -29,4 +29,4 @@ jobs:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           resourceGroupName: ${{ vars.RESOURCE_GROUP }}
           template: ./ARM-Templates/container-webapp-template.json
-          parameters: webAppName=sasrm-devops-${{ env.TARGET_ENV }}
+          parameters: webAppName=ab183-devops-${{ env.TARGET_ENV }}
