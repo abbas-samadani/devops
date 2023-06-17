@@ -27,6 +27,6 @@ jobs:
         uses: azure/arm-deploy@v1
         with:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          resourceGroupName: ${{ secrets.RESOURCE_GROUP }}
+          resourceGroupName: ${{ vars.RESOURCE_GROUP }}
           template: ./ARM-Templates/container-webapp-template.json
           parameters: webAppName=abbas-devops-${{ env.TARGET_ENV }}
