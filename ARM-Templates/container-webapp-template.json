@@ -3,11 +3,11 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "webAppName": {
-            "defaultValue": "abbas-devops-dev",
+            "defaultValue": "sasrm-devops-dev",
             "type": "String"
         },
         "hostingPlanName": {
-            "defaultValue": "abbas-devops-asp",
+            "defaultValue": "sasrm-devops-asp",
             "type": "String"
         },
         "appInsightsLocation": {
@@ -15,7 +15,7 @@
             "type": "String"
         },
         "appInsightsName": {
-            "defaultValue": "abbas-devops-ai",
+            "defaultValue": "sasrm-devops-ai",
             "type": "String"
         },        
         "sku": {
@@ -23,11 +23,11 @@
             "type": "String"
         },
         "registryName": {
-            "defaultValue": "abbasdevopsreg",
+            "defaultValue": "sasrmdevopsreg",
             "type": "String"
         },
         "imageName": {
-            "defaultValue": "abbas-devopsimage",
+            "defaultValue": "sasrm-devopsimage",
             "type":"String"
         },
         "registryLocation": {
