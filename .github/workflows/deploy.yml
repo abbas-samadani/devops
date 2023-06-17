@@ -7,10 +7,15 @@ env:
    TargetEnvironment: dev 
 
 jobs:
-
+    
   build-and-deploy:
     runs-on: ubuntu-latest
+    
     steps:
+    - name: Install Azure CLI
+        run: |
+          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
     - uses: actions/checkout@main
     
     - uses: azure/login@v1
