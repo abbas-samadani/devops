@@ -1,31 +1,26 @@
-# File: .github/workflows/deploy.yml
+
 name: AzureLoginSample
 on:
-    workflow_dispatch:
+  workflow_dispatch:
 
 env:
-   TargetEnvironment: dev 
+  TargetEnvironment: dev
 
 jobs:
-    
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Install Azure CLI
+      - name: Install Azure CLI
         run: |
           curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
-    - uses: actions/checkout@main
-    
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-    
-    - uses: azure/arm-deploy@v1
-      with:
-        subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID}}
-        resourceGroupName: ${{ vars.RESOURCE_GROUP}}
-        template: ./ARM-Templates/container-webapp-template.json
-        parameters: webAppName=abbas-devops-${{env.TargetEnvironment}}
-        
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+
