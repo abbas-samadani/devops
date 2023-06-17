@@ -3,11 +3,11 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "webAppName": {
-            "defaultValue": "hjklt-devops-dev",
+            "defaultValue": "abbas-devops-dev",
             "type": "String"
         },
         "hostingPlanName": {
-            "defaultValue": "hjklt-devops-asp",
+            "defaultValue": "abbas-devops-asp",
             "type": "String"
         },
         "appInsightsLocation": {
@@ -15,7 +15,7 @@
             "type": "String"
         },
         "appInsightsName": {
-            "defaultValue": "hjklt-devops-ai",
+            "defaultValue": "abbas-devops-ai",
             "type": "String"
         },        
         "sku": {
@@ -23,11 +23,11 @@
             "type": "String"
         },
         "registryName": {
-            "defaultValue": "hjkltdevopsreg",
+            "defaultValue": "abbasdevopsreg",
             "type": "String"
         },
         "imageName": {
-            "defaultValue": "hjklt-devopsimage",
+            "defaultValue": "abbas-devopsimage",
             "type":"String"
         },
         "registryLocation": {
