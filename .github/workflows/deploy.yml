@@ -26,8 +26,8 @@ jobs:
       - name: Deploy ARM Template
         uses: azure/arm-deploy@v1
         with:
-          subscriptionId: ${{ secrets.SUBSCRIPTIONID }}
+          subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           resourceGroupName: ${{ secrets.RESOURCE_GROUP }}
           template: ./ARM-Templates/container-webapp-template.json
-          parameters: webAppName=hjklt-devops-${{ env.TargetEnvironment }}
+          parameters: webAppName=abbas-devops-${{ env.TARGET_ENV }}
           scope: 'resourcegroup'
