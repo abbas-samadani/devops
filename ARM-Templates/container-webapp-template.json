@@ -23,7 +23,7 @@
             "type": "String"
         },
         "registryName": {
-            "defaultValue": "a183bdevopsreg",
+            "defaultValue": "abbasappcontainer",
             "type": "String"
         },
         "imageName": {
