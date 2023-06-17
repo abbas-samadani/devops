@@ -31,4 +31,4 @@ jobs:
           template: ./ARM-Templates/container-webapp-template.json
           parameters: |
             webAppName=hjklt-devops-${{ env.TargetEnvironment }}
-          scope: 'resource-group'
+          scope: 'resourcegroup'
