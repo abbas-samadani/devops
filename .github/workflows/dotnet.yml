@@ -50,3 +50,25 @@ jobs:
       
     - name: Docker Push
       run: docker push ${{env.registryName}}/${{env.registryName}}:${{env.tag}}
+
+  create_issue:
+    needs: [docker]
+    if: ${{ failure() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create GitHub issue on failure
+        uses: peter-evans/create-issue@v3
+        with:
+          title: Workflow Failure - ${{ github.workflow }}
+          body: |
+            The workflow *${{ github.workflow }}* has failed in the *${{ github.repository }}* repository.
+
+            **Commit**: ${{ github.sha }}
+            **Branch**: ${{ github.ref }}
+            **Action**: ${{ github.action }}
+            **Workflow Run ID**: ${{ github.run_id }}
+
+            Please investigate and take appropriate actions.
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
