@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "webAppName": {
-            "defaultValue": "a183b-devops-test",
+            "defaultValue": "a183b-devops-prod",
             "type": "String"
         },
         "hostingPlanName": {
