@@ -30,4 +30,4 @@ jobs:
           resourceGroupName: ${{ secrets.RESOURCE_GROUP }}
           template: ./ARM-Templates/container-webapp-template.json
           parameters: webAppName=abbas-devops-${{ env.TARGET_ENV }}
-          scope: 'resourcegroup'
+          scope: 'devops-test'
