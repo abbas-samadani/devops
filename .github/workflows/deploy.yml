@@ -27,8 +27,7 @@ jobs:
         uses: azure/arm-deploy@v1
         with:
           subscriptionId: ${{ secrets.SUBSCRIPTIONID }}
-          resourceGroupName: ${{ secrets.RG }}
+          resourceGroupName: ${{ secrets.RESOURCE_GROUP }}
           template: ./ARM-Templates/container-webapp-template.json
-          parameters: |
-            webAppName=hjklt-devops-${{ env.TargetEnvironment }}
+          parameters: webAppName=hjklt-devops-${{ env.TargetEnvironment }}
           scope: 'resourcegroup'
