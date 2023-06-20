@@ -51,6 +51,11 @@ jobs:
     - name: Docker Push
       run: docker push ${{env.registryName}}/${{env.registryName}}:${{env.tag}}
 
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
     - uses: azure/webapps-deploy@v2
       with:
         app-name: 'a183b-devops-dev'
