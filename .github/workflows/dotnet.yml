@@ -53,5 +53,5 @@ jobs:
 
     - uses: azure/webapps-deploy@v2
       with:
-      app-name: 'a183b-devops-dev'
-      images: ${{env.registryName}}/${{env.registryName}}:${{env.tag}}
+        app-name: 'a183b-devops-dev'
+        images: ${{env.registryName}}/${{env.registryName}}:${{env.tag}}
